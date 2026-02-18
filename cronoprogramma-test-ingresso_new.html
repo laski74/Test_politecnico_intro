@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronoprogramma Corso di Preparazione Test di Ingresso</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        h1 {
+            color: #667eea;
+            font-size: 2.2em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #764ba2;
+            font-size: 1.5em;
+            margin-bottom: 5px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.1em;
+            margin-top: 10px;
+        }
+
+        h3 {
+            color: #667eea;
+            font-size: 1.3em;
+            margin: 30px 0 15px 0;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        h4 {
+            color: #764ba2;
+            font-size: 1.1em;
+            margin: 20px 0 10px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #eee;
+        }
+
+        tr:hover {
+            background-color: #f8f9ff;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:nth-child(even):hover {
+            background-color: #f0f0ff;
+        }
+
+        .vacation-row {
+            background-color: #fff3cd !important;
+            font-style: italic;
+            color: #856404;
+        }
+
+        .vacation-row:hover {
+            background-color: #ffe69c !important;
+        }
+
+        .skipped-row {
+            background-color: #ffcccc !important;
+            font-style: italic;
+            color: #cc0000;
+        }
+
+        .skipped-row:hover {
+            background-color: #ffaaaa !important;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .highlight {
+            background-color: #fff3cd;
+            padding: 15px;
+            border-left: 4px solid #ffc107;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .info-box {
+            background-color: #e3f2fd;
+            padding: 15px;
+            border-left: 4px solid #2196f3;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .success-box {
+            background-color: #e8f5e9;
+            padding: 15px;
+            border-left: 4px solid #4caf50;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .warning-box {
+            background-color: #fff3e0;
+            padding: 15px;
+            border-left: 4px solid #ff9800;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        ul, ol {
+            margin-left: 30px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 2px solid #eee;
+            color: #666;
+            font-style: italic;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 600;
+            margin: 0 5px;
+        }
+
+        .badge-math {
+            background-color: #e3f2fd;
+            color: #1976d2;
+        }
+
+        .badge-physics {
+            background-color: #f3e5f5;
+            color: #7b1fa2;
+        }
+
+        strong {
+            color: #667eea;
+        }
+
+        .check {
+            color: #4caf50;
+            font-weight: bold;
+        }
+
+        .cross {
+            color: #f44336;
+            font-weight: bold;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 1.6em;
+            }
+
+            table {
+                font-size: 0.9em;
+            }
+
+            th, td {
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Cronoprogramma Corso di Preparazione Test di Ingresso</h1>
+            <h2>Politecnico e Università Scientifiche</h2>
+            <p class="subtitle"><strong>Anno Scolastico 2025/2026</strong></p>
+        </header>
+
+        <div class="section">
+            <h3>INFORMAZIONI GENERALI</h3>
+            <table>
+                <tr>
+                    <th>Parametro</th>
+                    <th>Dettaglio</th>
+                </tr>
+                <tr>
+                    <td><strong>Durata totale</strong></td>
+                    <td>30 ore</td>
+                </tr>
+                <tr>
+                    <td><strong>Frequenza</strong></td>
+                    <td>1 lezione settimanale</td>
+                </tr>
+                <tr>
+                    <td><strong>Durata lezione</strong></td>
+                    <td>2 ore</td>
+                </tr>
+                <tr>
+                    <td><strong>Giorno</strong></td>
+                    <td>Mercoledì</td>
+                </tr>
+                <tr>
+                    <td><strong>Data inizio</strong></td>
+                    <td>3 Dicembre 2025</td>
+                </tr>
+                <tr>
+                    <td><strong>Data termine</strong></td>
+                    <td>15 Aprile 2026</td>
+                </tr>
+                <tr>
+                    <td><strong>Numero lezioni</strong></td>
+                    <td>15</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="section">
+            <h3>CALENDARIO LEZIONI</h3>
+            <table>
+                <tr>
+                    <th class="text-center">Lez.</th>
+                    <th>Data</th>
+                    <th>Materia</th>
+                    <th>Argomenti</th>
+                    <th class="text-center">Ore</th>
+                </tr>
+                <tr>
+                    <td class="text-center"><strong>1</strong></td>
+                    <td>03/12/2025</td>
+                    <td><span class="badge badge-math">MATEMATICA</span></td>
+                    <td>
+                        • Insiemi numerici e calcolo aritmetico<br>
+                        • Numeri naturali, relativi, razionali e reali<br>
+                        • Semplici problemi con metodi elementari
+                    </td>
+                    <td class="text-center">2</td>
+                </tr>
+                <tr class="skipped-row">
+                    <td class="text-center">—</td>
+                    <td>10/12/2025</td>
+                    <td colspan="2"><em>LEZIONE SALTATA</em></td>
+                    <td class="text-center">—</td>
+                </tr>
+                <tr>
+                    <td class="text-center"><strong>2</strong></td>
+                    <td>17/12/2025</td>
+                    <td><span class="badge badge-physics">FISICA</span></td>
+                    <td>
+                        • Il metodo scientifico e la misura<br>
+                        • Vettori: definizione, operazioni, prodotto scalare<br>
+                        • Unità di misura e Sistema Internazionale
+                    </td>
+                    <td class="text-center">2</td>
+                </tr>
+                <tr class="vacation-row">
+                    <td class="text-center">—</td>
+                    <td>24/12/2025</td>
+                    <td colspan="2"><em>VACANZE NATALIZIE</em></td>
+                    <td class="text-center">—</td>
+                </tr>
+                <tr class="vacation-row">
+                    <td class="text-center">—</td>
+                    <td>31/12/2025</td>
+                    <td colspan="2"><em>VACANZE NATALIZIE</em></td>
+                    <td class="text-center">—</td>
+                </tr>
+                <tr>
+                    <td class="text-center"><strong>3</strong></td>
+                    <td>07/01/2026</td>
+                    <td><span class="badge badge-math">MATEMATICA</span></td>
+                    <td>
+                        • Fondamenti di statistica e probabilità<br>
+                        • Calcolo con potenze e radicali<br>
+                        • Media aritmetica e ponderata
+                    </td>
+                    <td class="text-center">2</td>
+                </tr>
+                <tr>
+                    <td class="text-center"><strong>4</strong></td>
+                    <td>14/01/2026</td>
+                    <td><span class="badge badge-physics">FISICA</span></td>
+                    <td>
+                        • Cinematica unidimensionale<br>
+                        • Cinematica in due dimensioni<br>
+                        • Moto rettilineo, circolare e parabolico
+                    </td>
+                    <td class="text-center">2</td>
+                </tr>
+                <tr>
+                    <td class="text-center"><strong>5</strong></td>
+                    <td>21/01/2026</td>
+                    <td><span class="badge badge-math">MATEMATICA</span></td>
+                    <td>
+                        • Calcolo algebrico<br>
+                        • Algebra dei monomi e polinomi<br>
+                        • Fattorizzazione
+                    </td>
+                    <td class="text-center">2</td>
+                </tr>
+                <tr>
+                    <td class="text-center"><strong>6</strong></td>
+                    <td>28/01/2026</td>
+                    <td><span class="badge badge-physics">FISICA</span></td>
+                    <td>
+                        • Forze e dinamica del punto<br>
+                        • Leggi di Newton<br>
+                        • Forza gravitazionale, elastica, attrito
+                    </td>
+                    <td class="text-center">2</td>
+                </tr>
+                <tr>
+                    <td class="text-center"><strong>7</strong></td>
+                    <td>04/02/2026</td>
+                    <td><span class="badge badge-math">MATEMATICA</span></td>
+                    <td>
+                        • Geometria euclidea del piano<br>
+                        • Geometria dello spazio<br>
+                        • Aree e volumi di figure elementari
+                    </td>
+                    <td class="text-center">2</td>
+                </tr>
+                <tr>
+                    <td class="text-center"><strong>8</strong></td>
+                    <td>11/02/2026</td>
+                    <td><span class="badge badge-physics">FISICA</span></td>
+                    <td>
+                        • Lavoro ed energia<br>
+                        • Energia cinetica e potenziale<br>
+                        • Conservazione dell'energia meccanica
+                    </td>
+                    <td class="text-center">2</td>
+                </tr>
+                <tr>
+                    <td class="text-center"><strong>9</strong></td>
+                    <td>18/02/2026</td>
+                    <td><span class="badge badge-math">MATEMATICA</span></td>
+                    <td>
+                        • Geometria analitica<br>
+                        • Equazione della retta e circonferenza<br>
+                        • Ellisse e iperbole
+                    </td>
+                    <td class="text-center">2</td>
+                </tr>
+                <tr>
+                    <td class="text-center"><strong>10</strong></td>
+                    <td>25/02/2026</td>
+                    <td><span class="badge badge-physics">FISICA</span></td>
+                    <td>
+                        • I fluidi<br>
+                        • Meccanica dei fluidi<br>
+                        • Spinta di Archimede, legge di Stevino, Bernoulli
+                    </td>
+                    <td class="text-center">2</td>
+                </tr>
+                <tr>
+                    <td class="text-center"><strong>11</strong></td>
+                    <td>04/03/2026</td>
+                    <td><span class="badge badge-math">MATEMATICA</span></td>
+                    <td>
+                        • Goniometria e trigonometria<br>
+                        • Funzioni seno, coseno, tangente<br>
+                        • Proprietà fondamentali
+                    </td>
+                    <td class="text-center">2</td>
+                </tr>
+                <tr>
+                    <td class="text-center"><strong>12</strong></td>
+                    <td>11/03/2026</td>
+                    <td><span class="badge badge-physics">FISICA</span></td>
+                    <td>
+                        • Calorimetria e termodinamica<br>
+                        • Gas ideali e equazione di stato<br>
+                        • Principi della termodinamica
+                    </td>
+                    <td class="text-center">2</td>
+                </tr>
+                <tr>
+                    <td class="text-center"><strong>13</strong></td>
+                    <td>18/03/2026</td>
+                    <td><span class="badge badge-math">MATEMATICA</span></td>
+                    <td>
+                        • Esponenziali e logaritmi<br>
+                        • Grafici di funzioni elementari<br>
+                        • Traslazioni e simmetrie
+                    </td>
+                    <td class="text-center">2</td>
+                </tr>
+                <tr class="vacation-row">
+                    <td class="text-center">—</td>
+                    <td>25/03/2026</td>
+                    <td colspan="2"><em>VACANZE PASQUALI</em></td>
+                    <td class="text-center">—</td>
+                </tr>
+                <tr class="vacation-row">
+                    <td class="text-center">—</td>
+                    <td>01/04/2026</td>
+                    <td colspan="2"><em>VACANZE PASQUALI</em></td>
+                    <td class="text-center">—</td>
+                </tr>
+                <tr>
+                    <td class="text-center"><strong>14</strong></td>
+                    <td>08/04/2026</td>
+                    <td><span class="badge badge-physics">FISICA</span></td>
+                    <td>
+                        • Elettricità<br>
+                        • Elettrostatica: campo e potenziale<br>
+                        • Circuiti elettrici e leggi di Kirchhoff
+                    </td>
+                    <td class="text-center">2</td>
+                </tr>
+                <tr>
+                    <td class="text-center"><strong>15</strong></td>
+                    <td>15/04/2026</td>
+                    <td><span class="badge badge-math">MATEMATICA</span></td>
+                    <td>
+                        • Equazioni e disequazioni<br>
+                        • Algebriche, irrazionali, con valore assoluto<br>
+                        • Esponenziali, logaritmiche, trigonometriche
+                    </td>
+                    <td class="text-center">2</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="section">
+            <h3>DISTRIBUZIONE ORARIA PER MATERIA</h3>
+            <table>
+                <tr>
+                    <th>Materia</th>
+                    <th class="text-center">Numero Lezioni</th>
+                    <th class="text-center">Ore Totali</th>
+                    <th class="text-center">Percentuale</th>
+                </tr>
+                <tr>
+                    <td><span class="badge badge-math">MATEMATICA</span></td>
+                    <td class="text-center">8</td>
+                    <td class="text-center">16</td>
+                    <td class="text-center"><strong>53%</strong></td>
+                </tr>
+                <tr>
+                    <td><span class="badge badge-physics">FISICA</span></td>
+                    <td class="text-center">7</td>
+                    <td class="text-center">14</td>
+                    <td class="text-center"><strong>47%</strong></td>
+                </tr>
+                <tr style="background-color: #f0f0f0; font-weight: bold;">
+                    <td><strong>TOTALE</strong></td>
+                    <td class="text-center"><strong>15</strong></td>
+                    <td class="text-center"><strong>30</strong></td>
+                    <td class="text-center"><strong>100%</strong></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="section">
+            <h3>CHIUSURE E FESTIVITÀ</h3>
+            
+            <h4>Lezione Saltata</h4>
+            <ul>
+                <li>Mercoledì 10 dicembre 2025</li>
+            </ul>
+
+            <h4>Vacanze Natalizie</h4>
+            <ul>
+                <li>Mercoledì 24 dicembre 2025</li>
+                <li>Mercoledì 31 dicembre 2025</li>
+            </ul>
+
+            <h4>Vacanze Pasquali</h4>
+            <ul>
+                <li>Mercoledì 25 marzo 2026</li>
+                <li>Mercoledì 1 aprile 2026</li>
+            </ul>
+
+            <div class="info-box">
+                <strong>Totale mercoledì con chiusura: 5</strong> (1 lezione saltata + 4 festività)
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>ARGOMENTI MATEMATICA (16 ore)</h3>
+
+            <h4>Lezione 1 - Insiemi numerici</h4>
+            <ul>
+                <li>Numeri naturali, relativi, razionali, reali</li>
+                <li>Calcolo aritmetico e metodi elementari</li>
+            </ul>
+
+            <h4>Lezione 3 - Statistica e radicali</h4>
+            <ul>
+                <li>Statistica descrittiva e probabilità elementare</li>
+                <li>Potenze e radicali</li>
+            </ul>
+
+            <h4>Lezione 5 - Algebra</h4>
+            <ul>
+                <li>Monomi e polinomi</li>
+                <li>Operazioni e fattorizzazione</li>
+            </ul>
+
+            <h4>Lezione 7 - Geometria</h4>
+            <ul>
+                <li>Geometria euclidea piana e dello spazio</li>
+                <li>Teoremi fondamentali, aree e volumi</li>
+            </ul>
+
+            <h4>Lezione 9 - Geometria analitica</h4>
+            <ul>
+                <li>Retta, circonferenza, ellisse, iperbole</li>
+                <li>Equazioni e rappresentazioni</li>
+            </ul>
+
+            <h4>Lezione 11 - Trigonometria</h4>
+            <ul>
+                <li>Funzioni trigonometriche</li>
+                <li>Goniometria di base</li>
+            </ul>
+
+            <h4>Lezione 13 - Funzioni esponenziali</h4>
+            <ul>
+                <li>Esponenziali e logaritmi</li>
+                <li>Grafici elementari e trasformazioni</li>
+            </ul>
+
+            <h4>Lezione 15 - Equazioni e disequazioni</h4>
+            <ul>
+                <li>Algebriche, irrazionali, valore assoluto</li>
+                <li>Esponenziali, logaritmiche, trigonometriche</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>ARGOMENTI FISICA (14 ore)</h3>
+
+            <h4>Lezione 2 - Introduzione</h4>
+            <ul>
+                <li>Metodo scientifico e misura</li>
+                <li>Vettori e unità di misura</li>
+            </ul>
+
+            <h4>Lezione 4 - Cinematica</h4>
+            <ul>
+                <li>Moto in una e due dimensioni</li>
+                <li>Velocità e accelerazione</li>
+            </ul>
+
+            <h4>Lezione 6 - Dinamica</h4>
+            <ul>
+                <li>Leggi di Newton</li>
+                <li>Tipi di forze</li>
+            </ul>
+
+            <h4>Lezione 8 - Energia</h4>
+            <ul>
+                <li>Lavoro e potenza</li>
+                <li>Conservazione dell'energia</li>
+            </ul>
+
+            <h4>Lezione 10 - Fluidi</h4>
+            <ul>
+                <li>Pressione e spinta di Archimede</li>
+                <li>Leggi fondamentali dei fluidi</li>
+            </ul>
+
+            <h4>Lezione 12 - Termodinamica</h4>
+            <ul>
+                <li>Calorimetria</li>
+                <li>Gas ideali e principi termodinamici</li>
+            </ul>
+
+            <h4>Lezione 14 - Elettricità</h4>
+            <ul>
+                <li>Elettrostatica</li>
+                <li>Circuiti in corrente continua</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>MATERIE COMPLEMENTARI</h3>
+
+            <h4>Logica e Comprensione del Testo</h4>
+            <div class="info-box">
+                <strong>Modalità:</strong> Integrazione trasversale durante le lezioni
+                <ul style="margin-top: 10px;">
+                    <li>Esercizi di ragionamento logico-deduttivo</li>
+                    <li>Analisi di testi scientifici</li>
+                    <li>Interpretazione di grafici e dati</li>
+                </ul>
+            </div>
+
+            <h4>Conoscenze Tecniche di Base</h4>
+            
+            <p><strong>Rappresentazione</strong> (studio autonomo)</p>
+            <ul>
+                <li>Relazione tra oggetti 3D e rappresentazione 2D</li>
+                <li>Codici dei linguaggi grafico-tecnici</li>
+            </ul>
+
+            <p><strong>Informatica</strong> (studio autonomo consigliato)</p>
+            <ul>
+                <li>Materiale video disponibile online</li>
+                <li>Concetti di programmazione di base</li>
+                <li>Variabili, cicli, operatori logici</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>METODOLOGIA DIDATTICA</h3>
+
+            <h4>Struttura di ogni lezione</h4>
+            <ul>
+                <li><strong>35%</strong> Teoria e spiegazione concetti</li>
+                <li><strong>65%</strong> Esercitazioni pratiche e simulazioni test</li>
+            </ul>
+
+            <h4>Tipologie di attività</h4>
+            <ol>
+                <li>Lezioni frontali con esempi applicativi</li>
+                <li>Risoluzione guidata di esercizi tipo test</li>
+                <li>Simulazioni cronometrate</li>
+                <li>Analisi degli errori comuni</li>
+            </ol>
+        </div>
+
+        <div class="section">
+            <h3>MATERIALI DIDATTICI CONSIGLIATI</h3>
+
+            <h4>Online</h4>
+            <ul>
+                <li><strong>Apply@polito:</strong> test di auto-esercitazione</li>
+                <li><strong>CISIA</strong> (www.cisiaonline.it): esempi quesiti TIL-Ingegneria</li>
+                <li><strong>Video-lezioni</strong> Politecnico di Torino</li>
+                <li><strong>Corso di accompagnamento</strong> Matematica e Fisica</li>
+            </ul>
+
+            <h4>Siti per esercitazioni</h4>
+            <ul>
+                <li>www.dettori.info/test/test.html</li>
+                <li>www.batmath.it/test/test.htm</li>
+                <li>www.chimica-online.it/esercizi-fisica.htm</li>
+                <li>www.studenti.it/test/</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>COMPOSIZIONE TEST DI INGRESSO</h3>
+            <table>
+                <tr>
+                    <th>Sezione</th>
+                    <th class="text-center">Quesiti</th>
+                    <th class="text-center">Tempo (min)</th>
+                </tr>
+                <tr>
+                    <td>Matematica</td>
+                    <td class="text-center">16</td>
+                    <td class="text-center">36</td>
+                </tr>
+                <tr>
+                    <td>Fisica</td>
+                    <td class="text-center">10</td>
+                    <td class="text-center">22</td>
+                </tr>
+                <tr>
+                    <td>Comprensione e Logica</td>
+                    <td class="text-center">10</td>
+                    <td class="text-center">20</td>
+                </tr>
+                <tr>
+                    <td>Conoscenze tecniche</td>
+                    <td class="text-center">6</td>
+                    <td class="text-center">12</td>
+                </tr>
+                <tr style="background-color: #f0f0f0; font-weight: bold;">
+                    <td><strong>TOTALE</strong></td>
+                    <td class="text-center"><strong>42</strong></td>
+                    <td class="text-center"><strong>90</strong></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="section">
+            <h3>NOTE IMPORTANTI</h3>
+
+            <h4>Argomenti ESCLUSI dal test</h4>
+            <div class="warning-box">
+                <p><span class="cross">❌</span> <strong>Calcolo differenziale</strong></p>
+                <p><span class="cross">❌</span> <strong>Calcolo integrale</strong></p>
+            </div>
+
+            <h4>Argomenti da privilegiare</h4>
+            <div class="success-box">
+                <p><span class="check">✅</span> Interpretazione grafica</p>
+                <p><span class="check">✅</span> Applicazione idee di base</p>
+                <p><span class="check">✅</span> Ragionamento più che calcoli lunghi</p>
+            </div>
+
+            <h4>Recupero lezioni</h4>
+            <p>In caso di ulteriori chiusure impreviste, possibili recuperi nei mercoledì di fine aprile/maggio:</p>
+            <ul>
+                <li>22 aprile 2026</li>
+                <li>29 aprile, 6, 13, 20 maggio 2026</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>VALUTAZIONE PREPARAZIONE</h3>
+
+            <h4>Test di verifica consigliati</h4>
+            <ul>
+                <li><strong>Iniziale:</strong> per individuare lacune (entro gennaio 2026)</li>
+                <li><strong>Intermedio:</strong> verifica progressi (marzo 2026)</li>
+                <li><strong>Finale:</strong> simulazione completa (aprile 2026)</li>
+            </ul>
+
+            <h4>Obiettivi minimi</h4>
+            <ul>
+                <li>Padronanza argomenti base matematica</li>
+                <li>Comprensione concetti fondamentali fisica</li>
+                <li>Velocità nella risoluzione esercizi</li>
+                <li>Gestione del tempo durante il test</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>CRITERI DI VALUTAZIONE</h3>
+            <table>
+                <tr>
+                    <th>Tipo di risposta</th>
+                    <th class="text-center">Punteggio</th>
+                </tr>
+                <tr>
+                    <td>Risposta corretta</td>
+                    <td class="text-center" style="color: #4caf50; font-weight: bold;">+1 punto</td>
+                </tr>
+                <tr>
+                    <td>Risposta non data</td>
+                    <td class="text-center" style="font-weight: bold;">0 punti</td>
+                </tr>
+                <tr>
+                    <td>Risposta errata</td>
+                    <td class="text-center" style="color: #f44336; font-weight: bold;">-0,25 punti</td>
+                </tr>
+            </table>
+
+            <div class="highlight">
+                <p><strong>Soglia minima per l'accesso in graduatoria:</strong> 30/100</p>
+            </div>
+
+            <div class="success-box">
+                <p><strong>Garanzia di immatricolazione:</strong> almeno <strong>60 punti su 100</strong></p>
+                <p style="margin-top: 10px;">Il raggiungimento di 60 punti assicura l'immatricolazione presso il corso di laurea inserito come prima preferenza.</p>
+            </div>
+        </div>
+
+        <footer>
+            <p><strong>Documento preparato per:</strong><br>
+            Corso di preparazione test di ingresso - Classi Quinte<br>
+            Anno Scolastico 2025/2026</p>
+            <p style="margin-top: 20px;"><em>Per informazioni e materiali: fare riferimento al portale Apply@polito e al sito CISIA</em></p>
+        </footer>
+    </div>
+</body>
+</html>
